@@ -14,7 +14,7 @@ namespace Shapes
         public int x { get; set; }
         public int y { get; set; }
         public int width { get; set; }
-        public int height { get; set; }        
+        public int height { get; set; }
         public bool isFilled { get; set; }
         public Color color { get; set; }
 
@@ -47,8 +47,8 @@ namespace Shapes
         /// <param name="width"></param>
         /// <param name="height"></param>
         /// <param name="color"></param>
-        
-        
+
+
         public void SetParam(int x, int y, int width, int height, Color color)
         {
             this.x = x;

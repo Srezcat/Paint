@@ -4,10 +4,10 @@ using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace Paint
-{    
+{
     public class Validation
     {
-        
+
         private TextBox txtCommand;
         public Boolean isValidCommand = true;
         public Boolean isSomethingInvalid = false;
@@ -28,33 +28,34 @@ namespace Paint
         {
             this.txtCommand = txtCommand;
 
-            int numberOfLines = txtCommand.Lines.Length;            
+            int numberOfLines = txtCommand.Lines.Length;
             for (int i = 0; i < numberOfLines; i++)
             {
                 String oneLineCommand = txtCommand.Lines[i];
                 oneLineCommand = oneLineCommand.Trim();
-                if (!oneLineCommand.Equals("")){
+                if (!oneLineCommand.Equals(""))
+                {
                     checkLineValidation(oneLineCommand);
                     lineNumber = (i + 1);
                     if (!isValidCommand)
-                    {                        
+                    {
                         MessageBox.Show("Error in line " + lineNumber);
                         isValidCommand = true;
                     }
-                }               
-                
+                }
+
             }
             checkLoopAndIfValidation();
             if (!isValidCommand)
             {
                 isSomethingInvalid = true;
-            }     
+            }
         }
 
         public void checkLoopAndIfValidation()
         {
             int numberOfLines = txtCommand.Lines.Length;
-            
+
 
             for (int i = 0; i < numberOfLines; i++)
             {
@@ -62,15 +63,16 @@ namespace Paint
                 oneLineCommand = oneLineCommand.Trim();
                 if (!oneLineCommand.Equals(""))
                 {
-                    hasLoop = Regex.IsMatch(oneLineCommand.ToLower(), @"\bloop\b");                    
-                    if (hasLoop) {
+                    hasLoop = Regex.IsMatch(oneLineCommand.ToLower(), @"\bloop\b");
+                    if (hasLoop)
+                    {
                         loopLineNo = (i + 1);
                     }
                     hasEndLoop = oneLineCommand.ToLower().Contains("endloop");
                     if (hasEndLoop)
                     {
                         endLoopLineNo = (i + 1);
-                    }                    
+                    }
                     hasIf = Regex.IsMatch(oneLineCommand.ToLower(), @"\bif\b");
                     if (hasIf)
                     {
@@ -83,7 +85,8 @@ namespace Paint
                     }
                 }
             }
-            if (loopLineNo > 0) {
+            if (loopLineNo > 0)
+            {
                 hasLoop = true;
             }
             if (endLoopLineNo > 0)
@@ -98,13 +101,16 @@ namespace Paint
             {
                 hasEndif = true;
             }
-            if (hasLoop) {
-                if (hasEndLoop) {
+            if (hasLoop)
+            {
+                if (hasEndLoop)
+                {
                     if (loopLineNo < endLoopLineNo)
                     {
 
                     }
-                    else {
+                    else
+                    {
                         isValidCommand = false;
                         MessageBox.Show("'ENDLOOP' must be after loop start");
                     }
@@ -140,18 +146,19 @@ namespace Paint
         public void checkLineValidation(string lineOfCommand)
         {
             String[] keyword = { "circle", "rectangle", "triangle", "polygon", "drawto", "moveto", "repeat", "if", "endif", "loop", "endloop" };
-            String[] shapes = {"circle","rectangle", "triangle", "polygon"};
-            String[] variable = { "radius", "width", "height", "counter", "size"};
+            String[] shapes = { "circle", "rectangle", "triangle", "polygon" };
+            String[] variable = { "radius", "width", "height", "counter", "size" };
             lineOfCommand = Regex.Replace(lineOfCommand, @"\s+", " ");
             string[] words = lineOfCommand.Split(' ');
             //removing white spaces in between words
-            for (int i = 0; i < words.Length; i++) {
+            for (int i = 0; i < words.Length; i++)
+            {
                 words[i] = words[i].Trim();
             }
             String firstWord = words[0].ToLower();
             Boolean firstWordIsKeyword = keyword.Contains(firstWord);
             if (firstWordIsKeyword)
-            {                
+            {
                 Boolean firstWordIsShape = shapes.Contains(words[0].ToLower());
                 if (firstWordIsShape)
                 {
@@ -168,14 +175,16 @@ namespace Paint
                                 {
                                     checkIfVariableDefined(words[1]);
                                 }
-                                else {
+                                else
+                                {
                                     isValidCommand = false;
                                 }
                                 //throw new NonDigitValueException("The value is not numerical \r\n It is not an error but just showing custom made exception.");
 
                             }
                         }
-                        else {
+                        else
+                        {
                             isValidCommand = false;
                         }
                     }
@@ -202,7 +211,8 @@ namespace Paint
                                 }
                             }
                         }
-                        else {
+                        else
+                        {
                             isValidCommand = false;
                         }
                     }
@@ -253,7 +263,9 @@ namespace Paint
                         }
                     }
                     else { }
-                } else if (firstWord.Equals("loop")) {
+                }
+                else if (firstWord.Equals("loop"))
+                {
                     if (words.Length == 2)
                     {
                         Boolean isInt = words[1].All(char.IsDigit);
@@ -271,7 +283,8 @@ namespace Paint
                 {
                     if (words.Length == 2)
                     {
-                        if (!words[1].Equals("loop")) {
+                        if (!words[1].Equals("loop"))
+                        {
                             isValidCommand = false;
                         }
                     }
@@ -285,7 +298,8 @@ namespace Paint
                     if (words.Length >= 4 && words.Length <= 6)
                     {
                         Boolean isInt = words[1].All(char.IsDigit);
-                        if (isInt) {
+                        if (isInt)
+                        {
                             if (shapes.Contains(words[2].ToLower()))
                             {
 
@@ -332,7 +346,8 @@ namespace Paint
                                                 isValidCommand = false;
                                             }
                                         }
-                                        else {
+                                        else
+                                        {
                                             Boolean hasPlus2 = words[4].Contains('+');
                                             if (hasPlus2)
                                             {
@@ -370,8 +385,10 @@ namespace Paint
                 {
                     if (words.Length == 5)
                     {
-                        if (variable.Contains(words[1].ToLower())) {
-                            if (words[2].Equals("=")) {
+                        if (variable.Contains(words[1].ToLower()))
+                        {
+                            if (words[2].Equals("="))
+                            {
                                 Boolean isInt = words[3].All(char.IsDigit);
                                 if (isInt)
                                 {
@@ -401,7 +418,9 @@ namespace Paint
                     {
                         isValidCommand = false;
                     }
-                } else if (firstWord.Equals("drawto") || firstWord.Equals("moveto")) {
+                }
+                else if (firstWord.Equals("drawto") || firstWord.Equals("moveto"))
+                {
                     String args = lineOfCommand.Substring(6, (lineOfCommand.Length - 6));
                     String[] parms = args.Split(',');
 
@@ -424,7 +443,8 @@ namespace Paint
                     }
                 }
             }
-            else {                
+            else
+            {
                 Boolean hasPlus = lineOfCommand.Contains('+');
                 Boolean hasEquals = lineOfCommand.Contains("=");
                 if (!hasEquals && !hasPlus)
@@ -518,26 +538,29 @@ namespace Paint
                             Boolean isVariableDefined = oneLineCommand.ToLower().Contains(variable.ToLower());
                             if (isVariableDefined)
                             {
-                                isVaraibleFound = true;                                
+                                isVaraibleFound = true;
                             }
                         }
 
                     }
-                    if (!isVaraibleFound) {
+                    if (!isVaraibleFound)
+                    {
                         MessageBox.Show("Varaible is not defined");
                         isValidCommand = false;
                     }
                 }
-                else {
+                else
+                {
                     MessageBox.Show("Varaible is not defined");
                     isValidCommand = false;
                 }
-                
+
             }
-            else {
+            else
+            {
                 MessageBox.Show("Varaible is not defined");
                 isValidCommand = false;
-            }            
+            }
         }
     }
 }

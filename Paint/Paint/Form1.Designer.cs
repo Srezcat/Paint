@@ -53,8 +53,6 @@
             this.btnEraser = new System.Windows.Forms.Button();
             this.btnPen = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -72,7 +70,7 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1370, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1904, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -126,18 +124,17 @@
             this.splitContainer1.Panel2.Controls.Add(this.btnSave);
             this.splitContainer1.Panel2.Controls.Add(this.btnRun);
             this.splitContainer1.Panel2.Controls.Add(this.txtCommand);
-            this.splitContainer1.Size = new System.Drawing.Size(1370, 612);
-            this.splitContainer1.SplitterDistance = 818;
+            this.splitContainer1.Size = new System.Drawing.Size(1904, 859);
+            this.splitContainer1.SplitterDistance = 1137;
             this.splitContainer1.TabIndex = 1;
             // 
             // panelPaint
             // 
             this.panelPaint.BackColor = System.Drawing.Color.White;
             this.panelPaint.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPaint.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelPaint.Location = new System.Drawing.Point(0, 0);
             this.panelPaint.Name = "panelPaint";
-            this.panelPaint.Size = new System.Drawing.Size(814, 608);
+            this.panelPaint.Size = new System.Drawing.Size(1133, 855);
             this.panelPaint.TabIndex = 0;
             this.panelPaint.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelPaint_MouseClick);
             this.panelPaint.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelPaint_MouseDown);
@@ -147,7 +144,7 @@
             // btnClearAll
             // 
             this.btnClearAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClearAll.Location = new System.Drawing.Point(466, 296);
+            this.btnClearAll.Location = new System.Drawing.Point(681, 296);
             this.btnClearAll.Name = "btnClearAll";
             this.btnClearAll.Size = new System.Drawing.Size(75, 24);
             this.btnClearAll.TabIndex = 4;
@@ -158,7 +155,7 @@
             // btnOpen
             // 
             this.btnOpen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOpen.Location = new System.Drawing.Point(466, 75);
+            this.btnOpen.Location = new System.Drawing.Point(681, 75);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(75, 23);
             this.btnOpen.TabIndex = 3;
@@ -169,7 +166,7 @@
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(466, 46);
+            this.btnSave.Location = new System.Drawing.Point(681, 46);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 2;
@@ -180,7 +177,7 @@
             // btnRun
             // 
             this.btnRun.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRun.Location = new System.Drawing.Point(466, 17);
+            this.btnRun.Location = new System.Drawing.Point(681, 17);
             this.btnRun.Name = "btnRun";
             this.btnRun.Size = new System.Drawing.Size(75, 23);
             this.btnRun.TabIndex = 1;
@@ -199,7 +196,7 @@
             this.txtCommand.Multiline = true;
             this.txtCommand.Name = "txtCommand";
             this.txtCommand.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtCommand.Size = new System.Drawing.Size(460, 608);
+            this.txtCommand.Size = new System.Drawing.Size(675, 855);
             this.txtCommand.TabIndex = 0;
             // 
             // splitContainer3
@@ -214,8 +211,6 @@
             // splitContainer3.Panel1
             // 
             this.splitContainer3.Panel1.BackColor = System.Drawing.Color.White;
-            this.splitContainer3.Panel1.Controls.Add(this.label3);
-            this.splitContainer3.Panel1.Controls.Add(this.label2);
             this.splitContainer3.Panel1.Controls.Add(this.btnPolygon);
             this.splitContainer3.Panel1.Controls.Add(this.btnCircle);
             this.splitContainer3.Panel1.Controls.Add(this.label1);
@@ -230,8 +225,8 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.splitContainer1);
-            this.splitContainer3.Size = new System.Drawing.Size(1370, 725);
-            this.splitContainer3.SplitterDistance = 109;
+            this.splitContainer3.Size = new System.Drawing.Size(1904, 1017);
+            this.splitContainer3.SplitterDistance = 154;
             this.splitContainer3.TabIndex = 0;
             // 
             // btnPolygon
@@ -240,7 +235,7 @@
             this.btnPolygon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnPolygon.FlatAppearance.BorderSize = 0;
             this.btnPolygon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPolygon.Location = new System.Drawing.Point(133, 70);
+            this.btnPolygon.Location = new System.Drawing.Point(168, 3);
             this.btnPolygon.Name = "btnPolygon";
             this.btnPolygon.Size = new System.Drawing.Size(27, 23);
             this.btnPolygon.TabIndex = 0;
@@ -253,7 +248,7 @@
             this.btnCircle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCircle.FlatAppearance.BorderSize = 0;
             this.btnCircle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCircle.Location = new System.Drawing.Point(100, 70);
+            this.btnCircle.Location = new System.Drawing.Point(135, 3);
             this.btnCircle.Name = "btnCircle";
             this.btnCircle.Size = new System.Drawing.Size(27, 23);
             this.btnCircle.TabIndex = 0;
@@ -263,10 +258,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(505, 14);
+            this.label1.Location = new System.Drawing.Point(28, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 25);
+            this.label1.Size = new System.Drawing.Size(27, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Size";
             // 
@@ -284,7 +278,7 @@
             // 
             this.cboSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSize.FormattingEnabled = true;
-            this.cboSize.Location = new System.Drawing.Point(484, 56);
+            this.cboSize.Location = new System.Drawing.Point(69, 52);
             this.cboSize.Name = "cboSize";
             this.cboSize.Size = new System.Drawing.Size(121, 21);
             this.cboSize.TabIndex = 2;
@@ -296,9 +290,9 @@
             this.btnChooseColor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnChooseColor.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.btnChooseColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChooseColor.Location = new System.Drawing.Point(282, 38);
+            this.btnChooseColor.Location = new System.Drawing.Point(292, 3);
             this.btnChooseColor.Name = "btnChooseColor";
-            this.btnChooseColor.Size = new System.Drawing.Size(63, 55);
+            this.btnChooseColor.Size = new System.Drawing.Size(67, 62);
             this.btnChooseColor.TabIndex = 1;
             this.btnChooseColor.UseVisualStyleBackColor = false;
             this.btnChooseColor.Click += new System.EventHandler(this.btnChooseColor_Click);
@@ -309,7 +303,7 @@
             this.btnTriangle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnTriangle.FlatAppearance.BorderSize = 0;
             this.btnTriangle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTriangle.Location = new System.Drawing.Point(67, 70);
+            this.btnTriangle.Location = new System.Drawing.Point(102, 3);
             this.btnTriangle.Name = "btnTriangle";
             this.btnTriangle.Size = new System.Drawing.Size(27, 23);
             this.btnTriangle.TabIndex = 0;
@@ -322,7 +316,7 @@
             this.btnRectangle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnRectangle.FlatAppearance.BorderSize = 0;
             this.btnRectangle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRectangle.Location = new System.Drawing.Point(133, 38);
+            this.btnRectangle.Location = new System.Drawing.Point(69, 3);
             this.btnRectangle.Name = "btnRectangle";
             this.btnRectangle.Size = new System.Drawing.Size(27, 23);
             this.btnRectangle.TabIndex = 0;
@@ -335,7 +329,7 @@
             this.btnEraser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnEraser.FlatAppearance.BorderSize = 0;
             this.btnEraser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEraser.Location = new System.Drawing.Point(100, 38);
+            this.btnEraser.Location = new System.Drawing.Point(36, 3);
             this.btnEraser.Name = "btnEraser";
             this.btnEraser.Size = new System.Drawing.Size(27, 23);
             this.btnEraser.TabIndex = 0;
@@ -348,39 +342,18 @@
             this.btnPen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnPen.FlatAppearance.BorderSize = 0;
             this.btnPen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPen.Location = new System.Drawing.Point(67, 38);
+            this.btnPen.Location = new System.Drawing.Point(3, 3);
             this.btnPen.Name = "btnPen";
             this.btnPen.Size = new System.Drawing.Size(27, 23);
             this.btnPen.TabIndex = 0;
             this.btnPen.UseVisualStyleBackColor = true;
             this.btnPen.Click += new System.EventHandler(this.btnPen_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(83, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 25);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Tools :";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(289, 14);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 20);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Color:";
-            // 
             // MsPaint
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.splitContainer3);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -431,8 +404,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnClearAll;
         private System.Windows.Forms.Button btnPolygon;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
     }
 }
 
