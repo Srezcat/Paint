@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 namespace Paint
 {
     class NonDigitValueException : Exception
-    {        
+    {
         public NonDigitValueException()
         {
-            
+
         }
         public NonDigitValueException(String message) : base(message)
         {
